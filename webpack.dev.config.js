@@ -1,18 +1,18 @@
 module.exports = {
-  entry: {
+  entry  : {
     script: "./src/js/script.jsx"
   },
-  output: {
-    path: __dirname + "/app/",
+  output : {
+    path    : __dirname + "/app/",
     filename: "js/[name].js"
   },
-  module: {
+  module : {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test   : /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel",
-        query: {
+        loader : "babel",
+        query  : {
           presets: ["react", "es2015"]
         }
       }
@@ -20,5 +20,5 @@ module.exports = {
   },
   resolve: {
     extensions: ["", ".js", ".jsx"]
-  }
+  },
 };

@@ -1,6 +1,18 @@
-body
-  margin 0;
-  padding: 0;
-wrapper2
-  margin 0;
+@import nib
+global-reset()
+
+@import _lib
+
+// viewport
+breakpoint-sp()
+  @media screen and (max-width: 640px)
+    {block}
+
+breakpoint-pc()
+  @media screen and (min-width: 641px)
+    {block}
+
+// var
+$font-base = "游ゴシック", "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, "ＭＳ ゴシック", sans-serif
+$font-dosis = 'Dosis', sans-serif
 

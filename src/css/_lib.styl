@@ -1,0 +1,31 @@
+$base_ratio ?= 2
+$imgs_path ?= "../"
+$base_url ?=""
+
+sprite_show($sprite,$ratio=$base_ratio, $flow=true, $display=block)
+  display: $display
+  width: floor($sprite[4]/$ratio)
+  height: floor($sprite[5]/$ratio)
+  background-position: floor($sprite[2]/$ratio) floor($sprite[3]/$ratio)
+  background-image: url($base_url+$sprite[8])
+  background-repeat: no-repeat
+  background-size: floor($sprite[6]/$ratio) floor($sprite[7]/$ratio)
+  overflow hidden
+  if $flow
+    text-indent 110%
+    white-space nowrap
+
+image_show($path, $ratio=$base_ratio, $flow= true, $disp=block)
+  size = image-size($imgs_path+$path)
+  width floor(size[0]/$ratio)
+  height floor(size[1]/$ratio)
+  display $disp
+  background-image: url($path)
+  background-repeat no-repeat
+  background-size: @width @height
+  if $flow
+    overflow hidden
+    text-indent 110%
+    white-space nowrap
+
+
