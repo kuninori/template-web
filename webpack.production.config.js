@@ -1,8 +1,8 @@
-import webpack from "webpack";
+var webpack = require("webpack");
 
 module.exports = {
   entry  : {
-    script: "./src/js/script.jsx"
+    script: "./src/js/main.js"
   },
   output : {
     path    : __dirname + "/app/",
@@ -15,13 +15,13 @@ module.exports = {
         exclude: /node_modules/,
         loader : "babel",
         query  : {
-          presets: ["react", "es2015"]
+          presets: ["env"]
         }
       }
     ]
   },
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: [".js"]
   },
   plugins: [
     new webpack.DefinePlugin({

@@ -1,6 +1,6 @@
 module.exports = {
   entry  : {
-    script: "./src/js/script.jsx"
+    script: "./src/js/main.js"
   },
   output : {
     path    : __dirname + "/app/",
@@ -11,14 +11,14 @@ module.exports = {
       {
         test   : /\.jsx?$/,
         exclude: /node_modules/,
-        loader : "babel",
+        loader : "babel-loader",
         query  : {
-          presets: ["react", "es2015"]
+          presets: ["env"]
         }
       }
     ]
   },
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: [".js"]
   },
 };
